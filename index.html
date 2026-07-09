@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SYLLABUS://TRACKER</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
   :root{
     --bg: #0a0d12;
@@ -419,36 +420,57 @@
   ::-webkit-scrollbar { width: 10px; height: 10px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 6px; }
+
+section.datesheet{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:12px;
+padding:22px;
+margin-top:28px;
+position:relative;
+}
+section.datesheet::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--physics);opacity:.7;}
+.datesheet table{width:100%;border-collapse:collapse;font-family:var(--mono);}
+.datesheet th,.datesheet td{border:1px solid var(--border);padding:10px 12px;text-align:left;}
+.datesheet th{color:#f2f6fa;background:var(--surface-2);}
+.datesheet h2{font-family:var(--display);margin:0 0 14px;}
 </style>
 </head>
 <body>
 <div class="scanline"></div>
 <div class="wrap">
-
-  <header class="top">
-    <p class="eyebrow">Board Exam Prep · Class XII</p>
-    <h1 class="title">syllabus://tracker<span class="cursor">&nbsp;</span></h1>
-    <p class="sub">Check off chapters as you finish revising them. Everything here is saved automatically — close the tab and it'll be exactly as you left it.</p>
-    <div class="overall">
-      <div class="overall-track"><div class="overall-fill" id="overallFill"></div></div>
-      <div class="overall-label"><span id="overallPct">0%</span><small id="overallCount">0 / 0 chapters</small></div>
-    </div>
-  </header>
-
-  <main class="grid" id="grid"></main>
-
-  <section class="notes">
-    <div class="notes-head">
-      <div class="icon">✎</div>
-      <h2>Notes</h2>
-      <div class="save-status" id="saveStatus"><span class="save-dot"></span><span id="saveText">Saved</span></div>
-    </div>
-    <textarea id="notes" placeholder="Formulas to revisit, doubts for tomorrow, weak topics, reminders..."></textarea>
-  </section>
-
-  <footer class="foot">Tracked locally to your account · Nothing is shared</footer>
+<header class="top">
+<p class="eyebrow">Board Exam Prep · Class XII</p>
+<h1 class="title">syllabus://tracker<span class="cursor"> </span></h1>
+<p class="sub">Check off chapters as you finish revising them. Everything here is saved automatically — close the tab and it'll be exactly as you left it.</p>
+<div class="overall">
+<div class="overall-track"><div class="overall-fill" id="overallFill"></div></div>
+<div class="overall-label"><span id="overallPct">0%</span><small id="overallCount">0 / 0 chapters</small></div>
 </div>
-
+</header>
+<main class="grid" id="grid"></main>
+<section class="notes">
+<div class="notes-head">
+<div class="icon">✎</div>
+<h2>Notes</h2>
+<div class="save-status" id="saveStatus"><span class="save-dot"></span><span id="saveText">Saved</span></div>
+</div>
+<textarea id="notes" placeholder="Formulas to revisit, doubts for tomorrow, weak topics, reminders..."></textarea>
+</section>
+<section class="datesheet">
+<h2>Class XII Date Sheet</h2>
+<table>
+<thead><tr><th>Date &amp; Day</th><th>Subject</th></tr></thead>
+<tbody>
+<tr><td>14-07-2026 (Tuesday)</td><td>Physics</td></tr>
+<tr><td>16-07-2026 (Thursday)</td><td>Chemistry</td></tr>
+<tr><td>18-07-2026 (Saturday)</td><td>Computer</td></tr>
+<tr><td>21-07-2026 (Tuesday)</td><td>English</td></tr>
+<tr><td>23-07-2026 (Thursday)</td><td>Maths</td></tr>
+</tbody>
+</table>
+</section><footer class="foot">Tracked locally to your account · Nothing is shared</footer>
+</div>
 <script>
 const SUBJECTS = [
   {
